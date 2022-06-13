@@ -1,0 +1,20 @@
+a.block-s1 {
+    width: 256px;
+    height: 130px;
+    background: url(/img/block-1s.png) no-repeat;
+    display: block;
+    transition: .5s;
+    margin-top: 100px;
+    margin-bottom: -110px;
+}
+
+a.block-s1:hover {
+    /* opacity: .8; */
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+a.block-s1.p2 {
+    background: url(/img/block-2s.png) no-repeat;
+}

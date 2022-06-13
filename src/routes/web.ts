@@ -5,5 +5,6 @@ const router = Router();
 
 router.get("/", IndexController.index);
 router.get("/about", IndexController.about);
+router.get("/tilevania", IndexController.tilevania);
 
 export default router;

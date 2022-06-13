@@ -1,20 +1,30 @@
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
     <title><%= title %></title>
+
+    <% if (hasBuild) { %>
+      <link rel="shortcut icon" href="TemplateData/favicon.ico">
+      <link rel="stylesheet" href="TemplateData/style.css">
+    <% } %>
     
-    <link rel="icon" href="/favicon.png">
-    <link rel="apple-touch-icon" href="../icon.png">
-    
-    <!-- Place favicon.ico in the root directory -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,300i,400,500,600" rel="stylesheet">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./icons/icomoon.css">
-    <link rel="stylesheet" href="./icons/fontawesome-all.min.css">
-    <link rel="stylesheet" href="./css/pluginsx.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./dist/css/swiper.min.css">
-</head>
+    <!-- Styles -->
+    <link href="./css/page.min.css" rel="stylesheet">
+    <link href="./css/style.min.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
+    <link rel="icon" href="./img/favicon.png">
+
+    <!--  Open Graph Tags -->
+    <meta property="og:title" content="chuckymagic">
+    <meta property="og:description" content="A Unity and C# Gaming App Portfolio powered by Node Typescript Express and EJS.">
+    <meta property="og:image" content="https://thetheme.io/thesaas/assets/img/og-img.jpg">
+    <meta property="og:url" content="https://chuckymagic.com/thesaas/">
+    <meta name="twitter:card" content="summary_large_image">
+  </head>
