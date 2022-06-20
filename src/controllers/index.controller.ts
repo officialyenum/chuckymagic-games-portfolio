@@ -8,6 +8,14 @@ class IndexController {
             hasBuild: false
         });
     }
+    public static games = (req: Request, res: Response, next: any) => {
+        res.render("pages/games", {
+            title: "Games Page",
+            showHeader: false,
+            hasBuild: false
+        });
+    }
+
     public static about = (req: Request, res: Response, next: any) => {
         res.render("pages/about", {
             title: "About Page",
