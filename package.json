@@ -8,13 +8,14 @@
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "tsc": "tsc",
     "copy-assets": "ts-node tools/copyAssets.ts",
-    "start": "node .",
-    "build": "npm-run-all clean lint tsc copy-assets",
     "clean-src": "rimraf src",
-    "dev:start": "npm-run-all build start",
+    "build": "npm-run-all clean lint tsc copy-assets clean-src",
+    "deploy": "git add . && git commit -m Heroku && git push heroku main",
+    "start": "node .",
+    "dev:build": "npm-run-all clean lint tsc copy-assets",
+    "dev:start": "npm-run-all dev:build start",
     "dev": "nodemon --watch src -e ts,ejs --exec npm run dev:start",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "git add . && git commit -m Heroku && git push heroku main"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
