@@ -9,9 +9,10 @@
     "tsc": "tsc",
     "copy-assets": "ts-node tools/copyAssets.ts",
     "start": "node .",
-    "clean-src": "rimraf src",
     "build": "npm-run-all clean lint tsc copy-assets",
-    "postinstall": "npm-run-all build clean-src start",
+    "clean-src": "rimraf src",
+    "poststart": "heroku local web",
+    "postinstall": "npm-run-all build clean-src poststart",
     "dev:start": "npm-run-all build start",
     "dev": "nodemon --watch src -e ts,ejs --exec npm run dev:start",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -50,5 +51,8 @@
     "ts-node": "^10.8.1",
     "tslint": "^6.1.3",
     "typescript": "^4.7.3"
+  },
+  "engines": {
+    "node": "16.14.0"
   }
 }
