@@ -6,5 +6,6 @@ const router = Router();
 router.get("/", IndexController.index);
 router.get("/about", IndexController.about);
 router.get("/tilevania", IndexController.tilevania);
+router.get("/laserdefender", IndexController.laserdefender);
 
 export default router;

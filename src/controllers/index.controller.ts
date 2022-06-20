@@ -17,7 +17,14 @@ class IndexController {
     }
     public static tilevania = (req: Request, res: Response, next: any) => {
         res.render("pages/tilevania", {
-            title: "Unity WebGL Player | TileVaniaSample",
+            title: "Unity WebGL Player | Tile Vania",
+            showHeader: false,
+            hasBuild: true
+        });
+    }
+    public static laserdefender = (req: Request, res: Response, next: any) => {
+        res.render("pages/laserdefender", {
+            title: "Unity WebGL Player | Laser Defender",
             showHeader: false,
             hasBuild: true
         });

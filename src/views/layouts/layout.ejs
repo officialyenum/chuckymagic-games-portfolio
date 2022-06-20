@@ -2,18 +2,20 @@
 <html lang="en">
     <%- include('../partials/head.ejs') %>
 <body>
-    <%- include('../partials/nav') %>
+    <% if (!hasBuild) { %>
+      <%- include('../partials/nav') %>
+    <% } %>
     <% if (showHeader) { %>
       <%- include('../partials/header') %>
     <% } %>
     <!-- Main Content -->
-    <main class="main-content">
-      <%- body %>
-    </main>
+    <%- body %>
     <!-- place the scripts at the end of the html page -->
     <!-- Page Content END -->	
 
-    <%- include('../partials/footer') %>
+    <% if (!hasBuild) { %>
+      <%- include('../partials/footer') %>
+    <% } %>
     <!-- Scripts -->
     <script src="./js/page.min.js"></script>
     <script src="./js/script.js"></script>

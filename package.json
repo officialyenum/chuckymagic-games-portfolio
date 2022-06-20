@@ -9,10 +9,13 @@
     "tsc": "tsc",
     "copy-assets": "ts-node tools/copyAssets.ts",
     "start": "node .",
+    "clean-src": "rimraf src",
     "build": "npm-run-all clean lint tsc copy-assets",
+    "postinstall": "npm-run-all build clean-src start",
     "dev:start": "npm-run-all build start",
     "dev": "nodemon --watch src -e ts,ejs --exec npm run dev:start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "git add . && git commit -m Heroku && git push heroku main"
   },
   "repository": {
     "type": "git",
