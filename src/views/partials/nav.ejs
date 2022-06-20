@@ -14,13 +14,13 @@
   
       <section class="navbar-mobile">
         <nav class="nav nav-navbar ml-auto">
-          <a class="nav-link active" href="/">Home</a>
-          <a class="nav-link" href="/games">Games</a>
-          <a class="nav-link" href="/about">About</a>
-          <a class="nav-link" href="#">Contact</a>
+          
+          <a class="nav-link <%= name==='home' ? 'active' : ''  %>" href="/">Home</a>
+          <a class="nav-link <%= name==='games' ? 'active' : ''  %>" href="/games">Games</a>
+          <a class="nav-link <%= name==='about' ? 'active' : ''  %>" href="/about">About</a>
+          <a class="nav-link <%= name==='home' ? 'active' : ''  %>" href="#">Contact</a>
         </nav>
       </section>
-  
     </div>
 </nav><!-- /.navbar -->
 <!-- Main Nav END -->

@@ -3,6 +3,7 @@ import { Request, Response } from "express";
 class IndexController {
     public static index = (req: Request, res: Response, next: any) => {
         res.render("pages/home", {
+            name: "home",
             title: "Home Page!",
             showHeader: true,
             hasBuild: false
@@ -10,6 +11,7 @@ class IndexController {
     }
     public static games = (req: Request, res: Response, next: any) => {
         res.render("pages/games", {
+            name: "games",
             title: "Games Page",
             showHeader: false,
             hasBuild: false
@@ -18,6 +20,7 @@ class IndexController {
 
     public static about = (req: Request, res: Response, next: any) => {
         res.render("pages/about", {
+            name: "about",
             title: "About Page",
             showHeader: false,
             hasBuild: false
